@@ -7,12 +7,12 @@ parameters:
   displayName: Application's Name
   description: How you want to call your application's name
   required: true
-  value: app-user26
-- name: orizon-defb
-  displayName: orizon-defb's Name
-  description: orizon-defb for Test Drive Access
+  value: GUID
+- name: GUID
+  displayName: GUID's Name
+  description: GUID for Test Drive Access
   required: true
-  value: <orizon-defb>
+  value: <GUID>
 objects:
 - apiVersion: v1
   kind: DeploymentConfig
@@ -60,7 +60,7 @@ objects:
   	name: ${APPLICATION_NAME}
 	name: ${APPLICATION_NAME}
   spec:
-	host: ${APPLICATION_NAME}.apps.orizon-defb.open.redhat.com
+	host: ${APPLICATION_NAME}.apps.${GUID}.open.redhat.com
 	port:
   	targetPort: 8080
 	to:
