@@ -18,7 +18,7 @@ objects:
   kind: DeploymentConfig
   metadata:
         name: ${APPLICATION_NAME}
-	labels:
+        labels:
 	name: ${APPLICATION_NAME}
   spec:
 	replicas: 1
@@ -42,7 +42,6 @@ objects:
   metadata:
 	labels:
   	name: ${APPLICATION_NAME}
-	name: ${APPLICATION_NAME}
   spec:
 	ports:
 	- port: 8080
@@ -58,7 +57,6 @@ objects:
   metadata:
 	labels:
   	name: ${APPLICATION_NAME}
-	name: ${APPLICATION_NAME}
   spec:
 	host: ${APPLICATION_NAME}.apps.${GUID}.open.redhat.com
 	port:
